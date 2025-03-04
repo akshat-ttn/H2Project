@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:employeeDB
+    username: akshat
+    password: akshat@ttn
+    platform: org.hibernate.dialect.H2Dialect
+    driverClassName: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+
+#  profiles:
+#    active: prod
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+employee:
+  id: 1
+  name: akshat
+  designation: Java_Dev
+
+
+
+logging:
+   level:
+     org:
+       springframework: info
